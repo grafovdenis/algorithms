@@ -1,7 +1,5 @@
 package jv;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Inversions {
@@ -42,9 +40,8 @@ public class Inversions {
         return merge(left, right);
     }
 
-    private void run() throws FileNotFoundException {
-        Scanner input = new Scanner(new File("input.txt"));
-        //Scanner input = new Scanner(System.in);
+    private void run() {
+        Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
@@ -54,7 +51,7 @@ public class Inversions {
         System.out.println(count);
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         new Inversions().run();
         long finishTime = System.currentTimeMillis();
